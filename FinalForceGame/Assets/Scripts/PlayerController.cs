@@ -9,10 +9,11 @@ public class PlayerController : MonoBehaviour
     public GameObject laser, laserSpawner;
 
     private float timer = 0;
+    public static int playerlife = 3;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -34,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void Update() 
+    void Update()
     {
         if (Input.GetAxis("Fire1") > 0 && timer > 0.25f)
         {
@@ -43,5 +44,14 @@ public class PlayerController : MonoBehaviour
             timer = 0;
         }
         timer += Time.deltaTime;
+    }
+
+    public void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("bosslaser"))
+        {
+            Destroy(other.gameObject);
+            playerlife--;
+        }
     }
 }

@@ -10,5 +10,13 @@ public class Mover : MonoBehaviour
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, speed);
     }
+
+    public void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("bosslaser") || other.gameObject.CompareTag("laser"))
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }
     
