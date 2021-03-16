@@ -5,6 +5,7 @@ using UnityEngine;
 public class Mover : MonoBehaviour
 {
     public float speed = 10;
+    public GameObject explosion;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,7 @@ public class Mover : MonoBehaviour
     {
         if (other.gameObject.CompareTag("bosslaser") || other.gameObject.CompareTag("laser"))
         {
+            GameObject.Instantiate(explosion, transform.position, transform.rotation);
             Destroy(this.gameObject);
         }
     }

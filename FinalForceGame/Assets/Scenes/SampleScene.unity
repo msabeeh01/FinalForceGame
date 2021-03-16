@@ -522,10 +522,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af23043db25e9d54393c492858de7910, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  minX: -8
+  speed: 7
+  minX: -4
   minY: -4
-  maxX: 8
+  maxX: 4
   maxY: 4
   laser: {fileID: 1894871038770222451, guid: f8f311d5374de934694afb077e705cf8, type: 3}
   laserSpawner: {fileID: 1267355742}
@@ -538,7 +538,7 @@ Transform:
   m_GameObject: {fileID: 340505125}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0}
   m_Children:
   - {fileID: 1267355743}
   m_Father: {fileID: 0}
@@ -719,7 +719,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.960083, y: -1.4192557}
+  m_Offset: {x: 0.9942436, y: -1.4192557}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -730,7 +730,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 17.780617, y: 10.016448}
+  m_Size: {x: 10.2424965, y: 10.016448}
   m_EdgeRadius: 0
 --- !u!4 &630539489
 Transform:

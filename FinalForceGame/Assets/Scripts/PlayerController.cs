@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetAxis("Fire1") > 0 && timer > 0.25f)
         {
-            GameObject.Instantiate(laser, laserSpawner.transform.position, laserSpawner.transform.rotation);
+            GameObject.Instantiate(laser, laserSpawner.transform);
 
             timer = 0;
         }

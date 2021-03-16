@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Threading;
 
 public class BossController : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class BossController : MonoBehaviour
 
     // Update is called once per frame
     int Direction = -1;
+    int specialmove = 0;
 
     void Update()
     {
@@ -32,34 +34,45 @@ public class BossController : MonoBehaviour
         if (bossAlive)
         {
             //Code for moving boss, simple left and right for alpha
-            switch (Direction)
+            if (specialmove <= 5)
             {
-                case -1:
-                    // Moving Left
-                    if (GetComponent<Rigidbody2D>().position.x > minX)
-                    {
-                        GetComponent<Rigidbody2D>().velocity = new Vector2(-5f, 0);
-                    }
-                    else
-                    {
-                        // Hit left boundary, change direction
-                        Direction = 1;
-                    }
-                    break;
+                switch (Direction)
+                {
+                    case -1:
+                        // Moving Left
+                        if (GetComponent<Rigidbody2D>().position.x > minX)
+                        {
+                            GetComponent<Rigidbody2D>().velocity = new Vector2(-5f, 0);
+                        }
+                        else
+                        {
+                            // Hit left boundary, change direction
+                            Direction = 1;
+                            specialmove++;
+                        }
+                        break;
 
-                case 1:
-                    // Moving Right
-                    if (GetComponent<Rigidbody2D>().position.x < maxX)
-                    {
-                        GetComponent<Rigidbody2D>().velocity = new Vector2(5f, 0);
-                    }
-                    else
-                    {
-                        // Hit right boundary, change direction
-                        Direction = -1;
-                    }
-                    break;
+                    case 1:
+                        // Moving Right
+                        if (GetComponent<Rigidbody2D>().position.x < maxX)
+                        {
+                            GetComponent<Rigidbody2D>().velocity = new Vector2(5f, 0);
+                        }
+                        else
+                        {
+                            // Hit right boundary, change direction
+                            Direction = -1;
+                            specialmove++;
+                        }
+                        break;
+                }
             }
+
+            else
+            {   
+                GetComponent<Rigidbody2D>().position = new Vector2(0, 0);
+            }
+            
 
             //Fire code
             if (timer > fireRate)
