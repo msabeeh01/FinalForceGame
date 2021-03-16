@@ -186,6 +186,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 3009285545571158844, guid: a47daf2317d103346960bc5b42dcbda0, type: 3}
   laserSpawner: {fileID: 46937507}
+  laserMove1: {fileID: 2107285564537833439, guid: 68585d0acf6c2394eba9d156bed4b45d,
+    type: 3}
   fireRate: 0.5
   bossspeed: 10
   minX: -5

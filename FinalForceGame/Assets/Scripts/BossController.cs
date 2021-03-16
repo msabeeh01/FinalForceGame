@@ -5,10 +5,11 @@ using System.Threading;
 
 public class BossController : MonoBehaviour
 {
-    public GameObject laser, laserSpawner;
+    public GameObject laser, laserSpawner, laserMove1;
     public float fireRate = 0.5f;
     public float bossspeed = 10;
     public float minX, maxX, minY, maxY;
+    GameObject laserMOVE1;
 
     public static int bossHealth = 10;
     public static bool bossAlive = true;
@@ -48,7 +49,7 @@ public class BossController : MonoBehaviour
                         {
                             // Hit left boundary, change direction
                             Direction = 1;
-                            specialmove++;
+                            specialmove++; // increase special move counter
                         }
                         break;
 
@@ -62,7 +63,7 @@ public class BossController : MonoBehaviour
                         {
                             // Hit right boundary, change direction
                             Direction = -1;
-                            specialmove++;
+                            specialmove++;// increase special move counter
                         }
                         break;
                 }
@@ -71,6 +72,13 @@ public class BossController : MonoBehaviour
             else
             {   
                 GetComponent<Rigidbody2D>().position = new Vector2(0, 0);
+                GetComponent<Rigidbody2D>().angularVelocity = 100;
+                fireRate = 30;
+                float lasertimer = 0;
+                CreateSpecialMove1();
+
+
+
             }
             
 
@@ -91,4 +99,12 @@ public class BossController : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    public void CreateSpecialMove1()
+    {
+        laserMOVE1 = GameObject.Instantiate(laserMove1, laserSpawner.transform.position, laserSpawner.transform.rotation);
+    }
+
+
+
 }
