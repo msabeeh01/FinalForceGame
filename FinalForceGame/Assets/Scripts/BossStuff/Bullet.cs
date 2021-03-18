@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     private Vector2 moveDirection;
     private float moveSpeed;
 
+    //All bullet movement code borrowed from https://www.youtube.com/watch?v=Mq2zYk5tW_E
     private void OnEnable()
     { 
         Invoke("Destroy", 3f);
@@ -14,22 +15,26 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //presets bullet speed
         moveSpeed = 5f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //move bullet based on speed and direction
         transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
     }
 
     public void SetMoveDirection(Vector2 dir)
     {
+        //sets bullets movement direction
         moveDirection = dir;
     }
 
     public void Destroy()
     {
+        //instead of destroying prefab copy, it deactivates the copy in the hierarchy
         gameObject.SetActive(false);
     }
 
@@ -39,6 +44,7 @@ public class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
+        //basic collision code
         if (other.gameObject.CompareTag("laser"))
         {
             Destroy();

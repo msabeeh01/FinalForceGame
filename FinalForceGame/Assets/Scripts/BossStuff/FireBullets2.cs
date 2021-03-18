@@ -8,26 +8,32 @@ public class FireBullets2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Fire", 0f, 0.03f);
+        InvokeRepeating("Fire", 0f, 0.05f);
     }
 
     // Update is called once per frame
     private void Fire()
     {
-        float bulDirX = transform.position.x + Mathf.Sin((angle2 * Mathf.PI) / 180f);
-        float bulDirY = transform.position.y + Mathf.Cos((angle2 * Mathf.PI) / 180f);
+        if (ShipMovement.bosshealth <= 70 && ShipMovement.bosshealth > 40)
+        {
+            float bulDirX = transform.position.x + Mathf.Sin((angle2 * Mathf.PI) / 180f);
+            float bulDirY = transform.position.y + Mathf.Cos((angle2 * Mathf.PI) / 180f);
 
-        Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
-        Vector2 bulDir = (bulMoveVector - transform.position).normalized;
+            Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
+            Vector2 bulDir = (bulMoveVector - transform.position).normalized;
 
-        GameObject bul = BulletPool.bulletPoolInstance.GetBullet();
-        bul.transform.position = transform.position;
-        bul.transform.rotation = transform.rotation;
-        bul.SetActive(true);
-        bul.GetComponent<Bullet>().SetMoveDirection(bulDir);
+            GameObject bul = BulletPool.bulletPoolInstance.GetBullet();
+            bul.transform.position = transform.position;
+            bul.transform.rotation = transform.rotation;
+            bul.SetActive(true);
+            bul.GetComponent<Bullet>().SetMoveDirection(bulDir);
 
-        angle2 += 50f;
+            angle2 += 50f;
+        }
 
+        else if (ShipMovement.bosshealth <= 40){
+            ((FireBullets3)gameObject.GetComponent<FireBullets3>()).enabled = true;
+        }
 
     }
 }

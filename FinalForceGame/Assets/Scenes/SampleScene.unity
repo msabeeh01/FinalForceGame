@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 90594314}
   - component: {fileID: 90594308}
   - component: {fileID: 90594315}
+  - component: {fileID: 90594309}
   m_Layer: 0
   m_Name: Boss
   m_TagString: boss
@@ -221,9 +222,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb552d0d8008d940a811b83b075b7a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletsAmount: 15
+  bulletsAmount: 20
   startAngle: 90
   endAngle: 270
+--- !u!114 &90594309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90594307}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e54b868061abd44b3c61b83b464106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!60 &90594310
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1049,8 +1062,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 335.9, y: 233.33}
+  m_AnchoredPosition: {x: -311.16, y: 166.99}
+  m_SizeDelta: {x: 124.37979, y: 86.39936}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1298448924
 MonoBehaviour:

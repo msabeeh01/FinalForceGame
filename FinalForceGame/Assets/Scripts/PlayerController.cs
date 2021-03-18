@@ -41,8 +41,8 @@ public class PlayerController : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().position = new Vector2(0, -4);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            ShipMovement.bosshealth = 10;
-            ScoreManager.score1 = 10;
+            ShipMovement.bosshealth = 100;
+            ScoreManager.score1 = 100;
             playerlife = 1;
 
         }

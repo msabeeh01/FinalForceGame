@@ -6,7 +6,7 @@ public class ShipMovement : MonoBehaviour
 {
     private float moveSpeed;
     private bool moveRight;
-    public static int bosshealth = 10;
+    public static int bosshealth = 100;
     public static bool bossalive = true;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +25,7 @@ public class ShipMovement : MonoBehaviour
         }
         if (bossalive)
         {
-            if (bosshealth > 7)
+            if (bosshealth > 70)
             {
                 if (transform.position.x > 3f)
                 {
@@ -47,7 +47,7 @@ public class ShipMovement : MonoBehaviour
                 }
             }
 
-            else if (ShipMovement.bosshealth > 4 && ShipMovement.bosshealth <= 7)
+            else if (ShipMovement.bosshealth > 0 && ShipMovement.bosshealth <= 70)
             {
                 transform.position = new Vector2(0,0);
 
@@ -60,6 +60,11 @@ public class ShipMovement : MonoBehaviour
         if (other.gameObject.CompareTag("player"))
         {
             PlayerController.playerlife--;
+        }
+        if(other.gameObject.CompareTag("laser"))
+        {
+            Destroy(other.gameObject);
+
         }
     }
 }
