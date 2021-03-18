@@ -12,7 +12,6 @@ public class FireBullets : MonoBehaviour
 
     private Vector2 bulletMoveDirection;
 
-    private float angle2 = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,26 +44,8 @@ public class FireBullets : MonoBehaviour
 
         else if (ShipMovement.bosshealth <= 7 && ShipMovement.bosshealth > 4)
         {
-            InvokeRepeating("Fire2", 0f, 0.1f);
+            ((FireBullets2)gameObject.GetComponent<FireBullets2>()).enabled = true;
+            //InvokeRepeating("Fire2", 0f, 0.1f);
         }
-    }
-
-    private void Fire2()
-    {
-        float bulDirX = transform.position.x + Mathf.Sin((angle2* Mathf.PI) / 180f);
-        float bulDirY = transform.position.y + Mathf.Cos((angle2* Mathf.PI) / 180f);
-
-        Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
-        Vector2 bulDir = (bulMoveVector - transform.position).normalized;
-
-        GameObject bul = BulletPool.bulletPoolInstance.GetBullet();
-        bul.transform.position = transform.position;
-        bul.transform.rotation = transform.rotation;
-        bul.SetActive(true);
-        bul.GetComponent<Bullet>().SetMoveDirection(bulDir);
-
-        angle2 += 10f;
-
-
     }
 }

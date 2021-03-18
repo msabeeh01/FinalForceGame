@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     public Text scoreText;
-    public static int score1 = 10;
+    public static int score1 = ShipMovement.bosshealth;
     // Start is called before the first frame update
     void Start()
     {

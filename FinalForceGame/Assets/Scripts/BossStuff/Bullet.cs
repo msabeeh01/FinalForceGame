@@ -47,7 +47,9 @@ public class Bullet : MonoBehaviour
         if (other.gameObject.CompareTag("player"))
         {
             Destroy();
+            PlayerController.playerlife--;
         }
-        
+
+
     }
 }

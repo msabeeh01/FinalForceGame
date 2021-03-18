@@ -199,9 +199,9 @@ GameObject:
   - component: {fileID: 90594312}
   - component: {fileID: 90594311}
   - component: {fileID: 90594310}
-  - component: {fileID: 90594309}
   - component: {fileID: 90594314}
   - component: {fileID: 90594308}
+  - component: {fileID: 90594315}
   m_Layer: 0
   m_Name: Boss
   m_TagString: boss
@@ -221,21 +221,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb552d0d8008d940a811b83b075b7a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletsAmount: 25
+  bulletsAmount: 15
   startAngle: 90
   endAngle: 270
---- !u!114 &90594309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 90594307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b7885d2099ea934c822e6280fd5b8d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!60 &90594310
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -462,6 +450,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8869a488253903e43badd0f2d79c5c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &90594315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90594307}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 323002decea89fb4aba561913f0d8c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &340505125
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,7 +490,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340505125}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -502,7 +502,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &340505127
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -581,7 +581,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340505125}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -4, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0}
   m_Children:
   - {fileID: 1267355743}
