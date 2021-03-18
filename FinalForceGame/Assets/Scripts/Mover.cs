@@ -14,10 +14,19 @@ public class Mover : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("bosslaser") || other.gameObject.CompareTag("laser"))
+        if (other.gameObject.CompareTag("bosslaser") || other.gameObject.CompareTag("boss"))
         {
-            GameObject.Instantiate(explosion, transform.position, transform.rotation);
-            Destroy(this.gameObject);
+            if (other.gameObject.CompareTag("boss"))
+            {
+                GameObject.Instantiate(explosion, transform.position, transform.rotation);
+                ScoreManager.score1--;
+                ShipMovement.bosshealth--;
+            }
+            else {
+                GameObject.Instantiate(explosion, transform.position, transform.rotation);
+                Destroy(this.gameObject);
+            }
+            
         }
     }
 }

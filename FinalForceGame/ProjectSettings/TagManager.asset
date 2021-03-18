@@ -6,6 +6,9 @@ TagManager:
   tags:
   - laser
   - bosslaser
+  - player
+  - boss
+  - boundary
   layers:
   - Default
   - TransparentFX

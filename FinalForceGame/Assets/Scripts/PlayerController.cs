@@ -45,13 +45,4 @@ public class PlayerController : MonoBehaviour
         }
         timer += Time.deltaTime;
     }
-
-    public void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("bosslaser"))
-        {
-            Destroy(other.gameObject);
-            playerlife--;
-        }
-    }
 }
