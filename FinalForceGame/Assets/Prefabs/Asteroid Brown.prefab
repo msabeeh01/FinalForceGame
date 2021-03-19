@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1853561366677111874}
   - component: {fileID: 5175129341385541641}
-  - component: {fileID: -5014892811314508998}
+  - component: {fileID: -8422801980779640678}
+  - component: {fileID: -8978770999853686141}
+  - component: {fileID: 7501024054345669655}
   m_Layer: 0
   m_Name: Asteroid Brown
   m_TagString: Untagged
@@ -70,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 21
   m_Sprite: {fileID: 21300000, guid: f17f8bb019478dc4e8e1699445868d69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -82,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &-5014892811314508998
+--- !u!50 &-8422801980779640678
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -97,9 +99,81 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &-8978770999853686141
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4949931529673021813}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6, y: 1.6}
+    newSize: {x: 1.6, y: 1.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.5, y: -0.52}
+      - {x: 0.56, y: -0.48}
+      - {x: 0.71, y: -0.32999998}
+      - {x: 0.77, y: -0.19999999}
+      - {x: 0.77, y: -0.04}
+      - {x: 0.72999996, y: -0.02}
+      - {x: 0.72999996, y: 0.06}
+      - {x: 0.69, y: 0.12}
+      - {x: 0.59, y: 0.19}
+      - {x: 0.56, y: 0.28}
+      - {x: 0.48999998, y: 0.34}
+      - {x: 0.45999998, y: 0.44}
+      - {x: 0.31, y: 0.52}
+      - {x: 0.14999999, y: 0.57}
+      - {x: 0.049999997, y: 0.62}
+      - {x: -0.19999999, y: 0.62}
+      - {x: -0.22, y: 0.59999996}
+      - {x: -0.31, y: 0.58}
+      - {x: -0.34, y: 0.53999996}
+      - {x: -0.48, y: 0.5}
+      - {x: -0.53, y: 0.41}
+      - {x: -0.59999996, y: 0.37}
+      - {x: -0.65999997, y: 0.32}
+      - {x: -0.77, y: 0.17999999}
+      - {x: -0.77, y: -0.21}
+      - {x: -0.72999996, y: -0.26}
+      - {x: -0.63, y: -0.35999998}
+      - {x: -0.58, y: -0.45999998}
+      - {x: -0.53, y: -0.51}
+      - {x: -0.39999998, y: -0.57}
+      - {x: -0.099999994, y: -0.66999996}
+      - {x: 0.25, y: -0.66999996}
+      - {x: 0.26999998, y: -0.65}
+      - {x: 0.35999998, y: -0.63}
+      - {x: 0.42, y: -0.59}
+--- !u!114 &7501024054345669655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4949931529673021813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c14d9af002133034eaf80e8849718621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

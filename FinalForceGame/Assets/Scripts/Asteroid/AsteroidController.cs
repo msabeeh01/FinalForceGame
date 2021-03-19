@@ -9,6 +9,7 @@ public class AsteroidController : MonoBehaviour
     public int hazardCount;
     public float spawnWait;
     public float startWait;
+    public float waveWait;
 
     // Start is called before the first frame update
     void Start()
@@ -20,12 +21,16 @@ public class AsteroidController : MonoBehaviour
     IEnumerator SpawnWaves()
     {
         yield return new WaitForSeconds(startWait);
-        for (int i = 0; i<hazardCount; i++ )
+        while (ShipMovement.bosshealth > 70)
         {
-            Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
-            Quaternion spawnRotation = Quaternion.identity;
-            Instantiate(hazard, spawnPosition, spawnRotation);
-            yield return new WaitForSeconds(spawnWait);
+            for (int i = 0; i < hazardCount; i++)
+            {
+                Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+                Quaternion spawnRotation = Quaternion.identity;
+                Instantiate(hazard, spawnPosition, spawnRotation);
+                yield return new WaitForSeconds(spawnWait);
+            }
+            yield return new WaitForSeconds(waveWait);
         }
     }
 }
