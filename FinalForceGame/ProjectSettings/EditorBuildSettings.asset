@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: a54f588df6a7d194cacc14291a076aa4
+  - enabled: 1
+    path: Assets/Scenes/EnemiesBeforeBoss.unity
+    guid: 051bdb1d89d912a41a3921ae57a7de49
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Retry Button.unity
+    guid: 0447d9357f86e774abf3a4b040482295
+  - enabled: 1
+    path: Assets/Scenes/WinnerScreen.unity
+    guid: 95f2b2c8f4f433b48889fc0f8a9dc6b6
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

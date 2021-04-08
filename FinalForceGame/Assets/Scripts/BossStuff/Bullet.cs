@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     private Vector2 moveDirection;
     private float moveSpeed;
+    public GameObject explosion;
 
     //All bullet movement code borrowed from https://www.youtube.com/watch?v=Mq2zYk5tW_E
     private void OnEnable()
@@ -57,5 +58,14 @@ public class Bullet : MonoBehaviour
         }
 
 
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("aster"))
+        {
+            GameObject.Instantiate(explosion, transform.position, transform.rotation);
+            Destroy();
+        }
     }
 }

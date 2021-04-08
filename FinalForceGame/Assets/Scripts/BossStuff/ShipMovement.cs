@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShipMovement : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class ShipMovement : MonoBehaviour
         if (bosshealth < 1)
         {
             bossalive = false;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
             Destroy(this.gameObject);
         }
         if (bossalive)

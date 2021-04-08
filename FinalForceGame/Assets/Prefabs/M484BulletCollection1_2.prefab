@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 969564988237026999}
   - component: {fileID: 6573479219166057497}
-  - component: {fileID: -2620858899990849213}
   - component: {fileID: 243767523780066830}
+  - component: {fileID: 6065790433937178327}
   m_Layer: 0
   m_Name: M484BulletCollection1_2
   m_TagString: bosslaser
@@ -84,35 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &-2620858899990849213
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3910669214917216092}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0.01}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.18, y: 0.18}
-    newSize: {x: 0.18, y: 0.18}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.089999996, y: 0.089999996}
-      - {x: -0.089999996, y: -0.089999996}
-      - {x: 0.089999996, y: -0.089999996}
-      - {x: 0.089999996, y: 0.089999996}
 --- !u!114 &243767523780066830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,3 +96,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4552e8543658b54449e85bb4c2d97e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 9209631142048690702, guid: 93e46632f9cfa17498737eb8f23e8799,
+    type: 3}
+--- !u!58 &6065790433937178327
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3910669214917216092}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.004810214}
+  serializedVersion: 2
+  m_Radius: 0.08518979

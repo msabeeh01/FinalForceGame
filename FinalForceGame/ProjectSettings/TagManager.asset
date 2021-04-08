@@ -9,6 +9,8 @@ TagManager:
   - player
   - boss
   - boundary
+  - aster
+  - enemy
   layers:
   - Default
   - TransparentFX
