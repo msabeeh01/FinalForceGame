@@ -22,7 +22,7 @@ public class ShipMovement : MonoBehaviour
         if (bosshealth < 1)
         {
             bossalive = false;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            SceneManager.LoadScene("Winner Screen");
             Destroy(this.gameObject);
         }
         if (bossalive)

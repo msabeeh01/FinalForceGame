@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class hitPlayer : MonoBehaviour
 {
+    public float maxRotateValue = 200;
+    void Start()
+    {
+        GetComponent<Rigidbody2D>().angularVelocity = Random.value * maxRotateValue;
+    }
     void Update()
     {
         if (ShipMovement.bosshealth <= 70)
