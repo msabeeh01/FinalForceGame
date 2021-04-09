@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
             GetComponent<Rigidbody2D>().position = new Vector2(0, -4);
             GameObject.Instantiate(explosion, transform.position, transform.rotation);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene("Retry Button");
             ShipMovement.bosshealth = 100;
             ScoreManager.score1 = 100;
             playerlife = 1;

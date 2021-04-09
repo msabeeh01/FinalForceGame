@@ -8,6 +8,8 @@ public class mainMenu : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        EnemyController.enemykilledScore = 0;
+        EnemyController.movenextlevel = false;
     }
 
     public void QuitGame()
@@ -17,11 +19,15 @@ public class mainMenu : MonoBehaviour
 
     public void Retry()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        EnemyController.enemykilledScore = 0;
+        EnemyController.movenextlevel = false;
     }
 
     public void FullRetry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
+        EnemyController.enemykilledScore = 0;
+        EnemyController.movenextlevel = false;
     }
 }
